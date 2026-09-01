@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+          * {    
+            margin: 0;
+            padding: 0;
+            list-style: none; /* Removes bullet points from lists */
+            text-decoration: none; /* Removes underlines from links */
+            transition: 0.3s; /* Adds a transition effect to all properties */
+            -webkit-touch-callout: none; /* Disables callout, tooltip appearing when touching and holding a touch target */
+            -webkit-user-select: none; /* Disables text selection on Safari */
+            user-select: none; /* Disables text selection */
+            outline: none; /* Removes outline from elements */
+        }
+   header{position: fixed; z-index:1000;top:0;left:0; height :12%;width:100%; background-color: #D3B8EC; text-align: center;align-items: center; padding:0px;border:1px solid green;margin-bottom:40px;}
+   
+   h2{font-family: courier;color: blue;padding-top:20px;text-shadow: 3px 4px 1px #F4F4DC;text-align: center;animation: anim 10s ease-in-out infinite;}
+   @keyframes anim{
+    0% {transform: scale(0.95);color: blue}
+   50%{transform: scale(1.2); color: green}
+  100%{transform: scale(0.95);color: red }
+   }
+   
+   #menu{display:flex;flex-direction:column;position: fixed;top:10px;right:10px;width:40px;height:40px;background-color:#F8F6FA;justify-content:center;border-radius:5px;align-items:center;border:1px solid blue}
+   
+    #menu:active{transform:scale(0.85)}
+    
+    .line1, .line2, .line3{background-color:red;border-radius:10px;height:3px;width:25px;margin:2px}
+    
+   .me {left:0%}
+   .color{color: white  }
+   
+  ul{font-size:20px;position: fixed; left:-100%; display:flex;flex-direction:column; width:50%; height:100vh; background-color: silver;justify-content: cente;align-items: cente; margin-top:40px}
+  a,li{padding:10px}
+  
+  a:hover{padding-left:30px; background-color: white; color:red;}
+  
+  #logo{position: fixed;top:10px; left:5px}
+  
+  body{padding:10px;transition: 0.05s;}
+  
+  .change{color: white;background-color: #333;}
+  
+    h3{color: green; margin-bottom :10px;margin-top:80px}
+  </style>
+</head>
+
+<body id="body">
+  
+    <header>
+       <img id="logo" src="logo.jpg" width="70px" height="65px" >
+<h2>EDEN'S MEAL<br><small>-restaurant-</small></h2>
+
+     <div id="menu" onclick="slide()">
+    <div class="line1"></div>
+    <div id="pemo" class="line2"></div>
+    <div class="line3"></div>
+  </div>
+  </header>
+    <ul id="demo">
+   <marquee><h3 style="color: dodgerblue; margin-top:35px; padding-left:5px;text-align: center">-Delight Meal, Delights Me!-</h3></marquee>
+   <hr>
+    <a href="index.html">🏠Home</a>
+    <a href="">🎁Eden's Menu</a>
+    <a>💡DIY & TIPS</a>
+    <a href="aboutUs.html">❓About Us</a>
+    <a href="">☎️Contact Us</a>
+    <li style="color: black" onclick="theme()">⚙️Theme  <span id="theme">ABC</span></li>
+  </ul>
+  
+  <h3> DIY & TIPS</h3><hr><br><br>
+  <h4>PASTRIES</h4>
+  <p>How to make Meatpie?</p>
+  <p>How to make Doughnut?</p>
+  <p>How to make Shawarma?</p>
+  <p>How to make Hamburger?</p>
+  <p>How to make Super-roll?</p>
+  <p>How to make Eggroll?</p>
+  <p>How to make Bread?</p>
+  <p>How to make Buns?</p><hr>
+  
+  <h4> DESSERTS</h4>
+  <p>How to make Fried rice?</p>
+  <p>How to make Jollof rice?</p>
+  <p>How to make Salad </p>
+  <p>How to make Fried noodles </p>
+  <p>How to make Chinese rice </p>
+  <p>How to make peper meat</p>
+  
+    <footer style="text-align: center; background-color:darksalmon; padding:10px;border-radius: 10px;margin-top:100px">
+    <address>
+    
+     Address:Bua Yeghe,CSS,<br>PO.BOX 388 Kpor road.<br>
+    </address>
+    <br>
+    <p>Author:O.William Ogbuji<br>
+    <a href="mailto:ogbuji.liamx38@gmail.com">ogbuji.liamx38@gmail.com</a><br>
+    &copy 2026 Eden's Meal Restaurant.All right reserved.
+    </p>
+  </footer>
+  
+  
+  <script>
+  
+    function slide(){
+      document.getElementById("demo").classList.toggle("me");
+    
+    }
+    function theme(){
+      document.getElementById("body").classList.toggle("change");
+      document.getElementById("theme").classList.toggle("color");
+    }
+  
+  </script>
+  
+  
+</body>
+
+</html>
